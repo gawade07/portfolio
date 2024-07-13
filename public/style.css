@@ -1,0 +1,511 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0%;margin: 0%;box-sizing: border-box;
+    text-decoration: none; list-style-type: disclosure-closed;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+:root{
+    --primary:rgb(23, 23, 29);
+    --primary2:rgba(23, 23, 29,.9);
+    --second:#EB9D37;
+    --text:#ffffff;
+    --transition: all .3s linear;
+   
+    
+}
+/* =Common=Class========================================= */
+.container{
+    max-width: 60vw;
+    margin: auto;
+    
+}
+.headline{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+a,p,i{
+    font-size: 1.3rem;
+    color: var(--text);
+    
+}
+#menu_btn_open{
+    display: none;
+}
+.headerBg{
+    backdrop-filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    /* background-color: rgba(235, 157, 55,.5); */
+
+}
+.card{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    border: 1px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    &:hover
+{
+       background-color: var(--second);
+      
+}
+}
+.cardHead{
+    font-size: 2rem;
+    text-transform: capitalize;
+
+}
+.btn{
+    padding: 1rem 2rem;
+    background-color: var(--second);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: var(--text);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.gridTwo{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#menu_btn_close{
+    display: none;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+    font-size: 2rem;
+}
+/* =Common=Class========================================= */
+/* =Header=Section=Start======================================== */
+header{
+z-index: 999;
+position: fixed;
+width: 100%;
+top: 0%;
+left: 0%;
+backdrop-filter: blur(12px);
+    /* background-color: rgba(31, 30, 29, 0.5); */
+
+
+
+    & .header_content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block:2rem ;
+
+        & .brand{
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--text);
+            span{
+                color: var(--second);
+                
+            }
+        }
+        & .menuList{
+            display: flex;
+            gap: 2rem;
+
+            & li{
+list-style-type: none;
+                & a{
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    transition: var(--transition);
+                    position: relative;
+                    text-transform: capitalize;
+                    color: var(--text);
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 0%;
+                        height: .2rem;
+                        left: 0;
+                        bottom: 0;
+                        background-color: var(--second);
+                        transition: all .3s linear;
+                        -webkit-transition: all .3s linear;
+                        -moz-transition: all .3s linear;
+                        -ms-transition: all .3s linear;
+                        -o-transition: all .3s linear;
+}
+
+                    &:hover, &:hover::after{
+                        color: var(--second);
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* =Header=Section=End======================================== */
+
+/* =MAIN=Section=Start======================================== */
+
+main{
+    background-image:linear-gradient(to right, rgba(23, 23, 29,.8),rgba(23, 23, 29,.8)), url(./img/image.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+ padding: 10rem;
+ background-image: url(./img/image.png),rgba(0,0,0,.5);
+    color: var(--text);
+
+    & .main_content{
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        position: relative;
+
+
+        .rightAside{
+            position: absolute;
+            writing-mode: vertical-lr;
+            -webkit-writing-mode: vertical-lr;
+            -ms-writing-mode: vertical-lr;
+            right:  -25%;
+            opacity: .5;
+             & p{
+                font-size: 1.5rem;
+                letter-spacing: .5rem;
+             }
+}
+.leftAside{
+    position: absolute;
+    /* writing-mode: vertical-lr; */
+    /* -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr; */
+    left:  -25%;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    
+     & p{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid ;
+        
+     }
+    & p:last-child{
+        border-bottom: none ;
+
+    }
+    
+}
+        & .main_text{
+            display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+        justify-content: center;
+       gap: 1rem;
+       font-weight: 100;
+       & h1{
+        font-size: 8rem;
+        text-transform: uppercase;
+        text-align: center;
+
+        & span{
+            color: var(--second);
+        }
+    }
+        & h2{
+            width: 50%;
+            text-align: center;
+        }
+        }
+    }
+}
+/* =MAIN=Section=End======================================== */
+/* =About=Section=Start======================================== */
+.about{
+    background-color: var(--primary);
+    width: 100%;
+    color: var(--text);
+    position: relative;
+    padding-bottom: 3rem;
+& .container{
+    position: relative;
+   
+    & .aboutContent{
+        position: absolute;
+        top: -7rem;
+        left: 0;
+      padding: 2REM;
+        background-color: #EB9D37;
+width: 100%;
+z-index: 99;
+
+        & H1{
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        & .aboutImg{
+
+           & img{
+            width: 26rem;
+            }
+        }
+        & .aboutText{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            & .aboutContenHead{
+
+                display: grid;
+                gap: 1rem;
+
+                & h2{
+                    color: var(--primary);
+                }
+                /* &.gridTwo{
+                    grid-template-columns: repeat(1 ,1fr);
+                } */
+
+                & .btn{
+                    background-color: var(--primary);
+                    width: max-content;
+                    /* margin: 0 auto; */
+                }
+               & .box{
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                & p{
+                    color: var(--primary);
+                    /* border-right: 1px solid;
+                    padding-right: 1rem; */
+                    & span{
+                        color: var(--text);
+                    }
+                }
+                }
+            }
+        }
+    }
+}
+   
+}
+.skillContent{
+    padding-top: 35rem;
+
+& .cardHead{
+    font-size: 2.5rem;
+}
+& ul{
+    display: grid;
+    margin-top: 2rem;
+    gap: 1rem;
+
+    & li{
+        font-size: 1.5rem;
+    }
+}
+
+  
+}
+/* =About=Section=End======================================== */
+
+/* =Query=Selector=Star======================================== */
+
+@media screen and (max-width:1200px) {
+    .skillContent {
+        padding-top: 57rem;
+    }
+}
+@media screen and (max-width:765px) {
+    html{
+        font-size: 42.5%;
+        font-family: "Rajdhani", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+    #menu_btn_close{
+        display: block;
+    }
+    .container{
+        max-width: 90vw;
+        margin: auto;
+        
+    }
+
+    .gridTwo{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #menu_btn_open{
+        display: block;
+    }
+
+    header{
+      
+        & .header_content{
+            & .brand{
+                font-size: 1rem;
+                span{
+                    color: var(--second);
+                }
+            }
+           
+            & .menuList{
+                display: flex;
+                gap: 1rem;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                backdrop-filter: blur(1px) ;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 5rem ;
+                background-color: var(--second);
+                
+                & #menu_btn_close{
+                    position: absolute;
+                    right: 5%;
+                    top: 5%;
+                    cursor: pointer;
+                }
+                & li{
+                    & a{
+                        font-size: 3rem;
+                        &::after{
+                            width: 0%;
+    }
+                        &:hover, &:hover::after{
+                            color: var(--second);
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+    .openClose{
+        display: none !important;
+    }
+
+    main{
+        background-image:linear-gradient(to right, rgba(23, 23, 29,.8),rgba(23, 23, 29,.8)), url(./img/image.png);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+     padding: 10rem;
+     background-image: url(./img/image.png),rgba(0,0,0,.5);
+        color: var(--text);
+    
+        & .main_content{
+            display: flex;
+            flex-direction: column;
+            gap: 8rem;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            position: relative;
+    
+    
+            .rightAside{
+                position: relative;
+                writing-mode: horizontal-tb;
+              
+               
+                opacity: .5;
+                &p
+{
+                    font-size: 1.5rem;
+                    letter-spacing: 0rem;
+                 }
+    }
+    .leftAside{
+        position: relative;
+        /* writing-mode: vertical-lr; */
+        /* -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: vertical-lr; */
+       
+        opacity: .5;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        gap: 1rem;
+        
+         & p{
+            font-size: 1.5rem;
+            padding-right: 1rem;
+            border-right: 1px solid ;
+            
+         }
+        & p:last-child{
+            border-right: none ;
+    
+        }
+        
+    }
+            & .main_text{
+                display: flex;
+            flex-direction: column;
+           
+            align-items: center;
+            justify-content: center;
+           gap: 1rem;
+           font-weight: 100;
+           & h1{
+            font-size: 8rem;
+            text-transform: uppercase;
+            text-align: center;
+    
+            & span{
+                color: var(--second);
+            }
+        }
+            & h2{
+                width: 50%;
+                text-align: center;
+            }
+            }
+        }
+    }
+}
+/* =Query=Selector=End======================================== */
